@@ -41,6 +41,7 @@
 
     <main class="main">
         <!-- HERO -->
+        <!-- HERO -->
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
@@ -51,9 +52,9 @@
                     </p>
                     <a href="#products" class="button">View Livestock</a>
                 </div>
-                <!-- Simple visual element instead of complex image requirement -->
+                <!-- Replaced emoji with real image -->
                 <div class="home__img-wrapper">
-                    <span class="home__emoji">🐖</span>
+                    <img src="hero_farm_pig.png" alt="Nanda Farm Hero Web" class="home__img">
                 </div>
             </div>
         </section>
@@ -61,41 +62,68 @@
         <!-- PRODUCTS -->
         <section class="products section" id="products">
             <h2 class="section__title">Available Stock</h2>
-            <span class="section__subtitle">Top Quality Breeds</span>
+            <span class="section__subtitle">Top Quality Breeds - Swipe to see more</span>
 
-            <div class="products__container container grid">
-                <!-- Product 1 -->
-                <article class="product__card">
-                    <div class="product__circle"></div>
-                    <span class="product__img-emoji">🐷</span>
-                    <h3 class="product__title">Super Piglet</h3>
-                    <span class="product__price">Rp 1.500.000</span>
-                    <button class="button product__button">
-                        Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </button>
-                </article>
+            <!-- Netflix-style slider container -->
+            <div class="products__slider-wrapper">
+                <div class="products__container" id="product-slider">
+                    <!-- Product 1 -->
+                    <article class="product__card">
+                        <img src="pig_product_1.png" alt="Super Piglet" class="product__img">
+                        <h3 class="product__title">Super Piglet</h3>
+                        <span class="product__price">Rp 1.500.000</span>
+                        <a href="https://wa.me/081803386665" target="_blank">
+                            <button class="button product__button">
+                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </article>
 
-                <!-- Product 2 -->
-                <article class="product__card">
-                    <div class="product__circle"></div>
-                    <span class="product__img-emoji">🐗</span>
-                    <h3 class="product__title">Duroc Breed</h3>
-                    <span class="product__price">Rp 2.500.000</span>
-                    <button class="button product__button">
-                        Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </button>
-                </article>
+                    <!-- Product 2 -->
+                    <article class="product__card">
+                        <img src="pig_product_2.png" alt="Duroc Breed" class="product__img">
+                        <h3 class="product__title">Duroc Breed</h3>
+                        <span class="product__price">Rp 2.500.000</span>
+                        <a href="https://wa.me/081803386665" target="_blank">
+                            <button class="button product__button">
+                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </article>
 
-                <!-- Product 3 -->
-                <article class="product__card">
-                    <div class="product__circle"></div>
-                    <span class="product__img-emoji">🐖</span>
-                    <h3 class="product__title">Large White</h3>
-                    <span class="product__price">Rp 3.000.000</span>
-                    <button class="button product__button">
-                        Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </button>
-                </article>
+                    <!-- Product 3 -->
+                    <article class="product__card">
+                        <img src="pig_product_3.png" alt="Large White" class="product__img">
+                        <h3 class="product__title">Large White</h3>
+                        <span class="product__price">Rp 3.000.000</span>
+                        <a href="https://wa.me/081803386665" target="_blank">
+                            <button class="button product__button">
+                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </article>
+
+                    <!-- Product 4 (Repeat 1) -->
+                    <article class="product__card">
+                        <img src="pig_product_1.png" alt="Super Piglet" class="product__img">
+                        <h3 class="product__title">Super Piglet (Batch 2)</h3>
+                        <span class="product__price">Rp 1.500.000</span>
+                        <a href="https://wa.me/081803386665" target="_blank">
+                            <button class="button product__button">
+                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </article>
+                    <!-- Product 5 (Repeat 2) -->
+                    <article class="product__card">
+                        <img src="pig_product_2.png" alt="Duroc Breed" class="product__img">
+                        <h3 class="product__title">Duroc Breed (Batch 2)</h3>
+                        <span class="product__price">Rp 2.500.000</span>
+                        <button class="button product__button">
+                            Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -127,6 +155,40 @@
             </div>
         </section>
 
+        <!-- OWNER -->
+        <section class="owner section" id="owner">
+            <h2 class="section__title">Meet the Owner</h2>
+            <span class="section__subtitle">Dedication & Passion</span>
+
+            <div class="owner__container container grid">
+                <div class="owner__img-box">
+                    <img src="Owner-farm.jpeg" alt="Komang Kris Nanda" class="owner__img">
+                </div>
+
+                <div class="owner__data">
+                    <h3 class="owner__name">Komang Kris Nanda</h3>
+                    <span class="owner__profession">Young Farmer & Entrepreneur</span>
+                    <p class="owner__description">
+                        At just 18 years old, Komang Kris Nanda is driving the vision of Nanda Farm with energy and
+                        commitment.
+                        His passion for sustainable livestock farming ensures that every animal is raised with the
+                        utmost care and quality.
+                    </p>
+                    <div class="owner__social">
+                        <a href="https://wa.me/081803386665" class="owner__social-link" target="_blank">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/kris_nanda24__/" class="owner__social-link" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://www.tiktok.com/@nandakris46" class="owner__social-link" target="_blank">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CONTACT -->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contact Us</h2>
@@ -149,9 +211,12 @@
                 <p class="footer__description">Providing high quality livestock since 2023.</p>
             </div>
             <div class="footer__social">
-                <a href="#" class="footer__social-link"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="#" class="footer__social-link"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href="#" class="footer__social-link"><ion-icon name="logo-tiktok"></ion-icon></a>
+                <a href="https://www.facebook.com/komang.krisnanda.180" class="footer__social-link"><ion-icon
+                        name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/kris_nanda24__/" class="footer__social-link"><ion-icon
+                        name="logo-instagram"></ion-icon></a>
+                <a href="https://www.tiktok.com/@nandakris46?_r=1&_t=ZS-93DdRomc9LB"
+                    class="footer__social-link"><ion-icon name="logo-tiktok"></ion-icon></a>
             </div>
         </div>
         <p class="footer__copy">&#169; Nanda Farm. All rights reserved.</p>
