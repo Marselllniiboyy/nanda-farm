@@ -189,6 +189,49 @@ button {
     cursor: pointer;
 }
 
+/* Language Switcher */
+.nav__extras {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-color-light);
+    transition: .3s;
+}
+
+.lang-flag {
+    width: 16px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.lang-option:hover {
+    color: var(--first-color);
+}
+
+.lang-option.active {
+    color: var(--first-color);
+    font-weight: var(--font-bold);
+}
+
+.lang-separator {
+    color: var(--text-color-light);
+}
+
 /* Mobile Menu */
 @media screen and (max-width: 767px) {
     .nav__menu {

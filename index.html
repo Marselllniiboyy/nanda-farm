@@ -23,18 +23,32 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#products" class="nav__link">Our Pigs</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link active-link" data-i18n="nav_home">Home</a>
+                    </li>
+                    <li class="nav__item"><a href="#products" class="nav__link" data-i18n="nav_pigs">Our Pigs</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav_about">About Us</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav_contact">Contact</a></li>
                 </ul>
                 <div class="nav__close" id="nav-close">
                     <ion-icon name="close-outline"></ion-icon>
                 </div>
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <ion-icon name="grid-outline"></ion-icon>
+            <!-- Language Switcher & Toggle -->
+            <div class="nav__extras">
+                <div class="language-switcher">
+                    <span class="lang-option active" data-lang="en">
+                        <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="lang-flag"> EN
+                    </span>
+                    <span class="lang-separator">|</span>
+                    <span class="lang-option" data-lang="id">
+                        <img src="https://flagcdn.com/24x18/id.png" alt="Indonesia" class="lang-flag"> ID
+                    </span>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </div>
             </div>
         </nav>
     </header>
@@ -45,12 +59,12 @@
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
-                    <h1 class="home__title">Premium Healthy <br> Pigs For You</h1>
-                    <p class="home__description">
+                    <h1 class="home__title" data-i18n="hero_title">Premium Healthy <br> Pigs For You</h1>
+                    <p class="home__description" data-i18n="hero_desc">
                         Expertly raised livestock at Nanda Farm. We ensure high-quality breeds for breeding, farming, or
                         events.
                     </p>
-                    <a href="#products" class="button">View Livestock</a>
+                    <a href="#products" class="button" data-i18n="hero_btn">View Livestock</a>
                 </div>
                 <!-- Replaced emoji with real image -->
                 <div class="home__img-wrapper">
@@ -61,8 +75,8 @@
 
         <!-- PRODUCTS -->
         <section class="products section" id="products">
-            <h2 class="section__title">Available Stock</h2>
-            <span class="section__subtitle">Top Quality Breeds - Swipe to see more</span>
+            <h2 class="section__title" data-i18n="products_title">Available Stock</h2>
+            <span class="section__subtitle" data-i18n="products_subtitle">Top Quality Breeds - Swipe to see more</span>
 
             <!-- Netflix-style slider container -->
             <div class="products__slider-wrapper">
@@ -70,11 +84,12 @@
                     <!-- Product 1 -->
                     <article class="product__card">
                         <img src="images/pig_1.jpeg" alt="Super Piglet" class="product__img">
-                        <h3 class="product__title">Super Piglet</h3>
+                        <h3 class="product__title" data-i18n="product_super_piglet">Super Piglet</h3>
                         <span class="product__price">Rp 1.500.000</span>
                         <a href="https://wa.me/081803386665" target="_blank">
                             <button class="button product__button">
-                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                                <span data-i18n="buy_now">Buy Now</span> <ion-icon
+                                    name="arrow-forward-outline"></ion-icon>
                             </button>
                         </a>
                     </article>
@@ -82,11 +97,12 @@
                     <!-- Product 2 -->
                     <article class="product__card">
                         <img src="images/pig_2.jpeg" alt="Duroc Breed" class="product__img">
-                        <h3 class="product__title">Duroc Breed</h3>
+                        <h3 class="product__title" data-i18n="product_duroc">Duroc Breed</h3>
                         <span class="product__price">Rp 2.500.000</span>
                         <a href="https://wa.me/081803386665" target="_blank">
                             <button class="button product__button">
-                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                                <span data-i18n="buy_now">Buy Now</span> <ion-icon
+                                    name="arrow-forward-outline"></ion-icon>
                             </button>
                         </a>
                     </article>
@@ -94,11 +110,12 @@
                     <!-- Product 3 -->
                     <article class="product__card">
                         <img src="images/pig_3.jpeg" alt="Large White" class="product__img">
-                        <h3 class="product__title">Large White</h3>
+                        <h3 class="product__title" data-i18n="product_large_white">Large White</h3>
                         <span class="product__price">Rp 3.000.000</span>
                         <a href="https://wa.me/081803386665" target="_blank">
                             <button class="button product__button">
-                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                                <span data-i18n="buy_now">Buy Now</span> <ion-icon
+                                    name="arrow-forward-outline"></ion-icon>
                             </button>
                         </a>
                     </article>
@@ -106,21 +123,22 @@
                     <!-- Product 4 (Repeat 1) -->
                     <article class="product__card">
                         <img src="images/pig_1.jpeg" alt="Super Piglet" class="product__img">
-                        <h3 class="product__title">Super Piglet (Batch 2)</h3>
+                        <h3 class="product__title" data-i18n="product_super_piglet_batch2">Super Piglet (Batch 2)</h3>
                         <span class="product__price">Rp 1.500.000</span>
                         <a href="https://wa.me/081803386665" target="_blank">
                             <button class="button product__button">
-                                Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                                <span data-i18n="buy_now">Buy Now</span> <ion-icon
+                                    name="arrow-forward-outline"></ion-icon>
                             </button>
                         </a>
                     </article>
                     <!-- Product 5 (Repeat 2) -->
                     <article class="product__card">
                         <img src="images/pig_3.jpeg" alt="Duroc Breed" class="product__img">
-                        <h3 class="product__title">Duroc Breed (Batch 2)</h3>
+                        <h3 class="product__title" data-i18n="product_duroc_batch2">Duroc Breed (Batch 2)</h3>
                         <span class="product__price">Rp 2.500.000</span>
                         <button class="button product__button">
-                            Buy Now <ion-icon name="arrow-forward-outline"></ion-icon>
+                            <span data-i18n="buy_now">Buy Now</span> <ion-icon name="arrow-forward-outline"></ion-icon>
                         </button>
                     </article>
                 </div>
@@ -131,8 +149,8 @@
         <section class="about section" id="about">
             <div class="about__container container grid">
                 <div class="about__data">
-                    <h2 class="section__title about__title">Why Choose <br> Nanda Farm?</h2>
-                    <p class="about__description">
+                    <h2 class="section__title about__title" data-i18n="about_title">Why Choose <br> Nanda Farm?</h2>
+                    <p class="about__description" data-i18n="about_desc">
                         We are dedicated to sustainable and ethical farming. Our pigs are fed with high-nutrition food
                         and raised in a clean environment to ensure the best meat quality and health.
                     </p>
@@ -140,15 +158,15 @@
                     <div class="about__features">
                         <div class="about__feature">
                             <ion-icon name="shield-checkmark-outline"></ion-icon>
-                            <span>100% Healthy</span>
+                            <span data-i18n="feature_healthy">100% Healthy</span>
                         </div>
                         <div class="about__feature">
                             <ion-icon name="nutrition-outline"></ion-icon>
-                            <span>Organic Feed</span>
+                            <span data-i18n="feature_organic">Organic Feed</span>
                         </div>
                         <div class="about__feature">
                             <ion-icon name="pricetags-outline"></ion-icon>
-                            <span>Best Price</span>
+                            <span data-i18n="feature_price">Best Price</span>
                         </div>
                     </div>
                 </div>
@@ -157,8 +175,8 @@
 
         <!-- OWNER -->
         <section class="owner section" id="owner">
-            <h2 class="section__title">Meet the Owner</h2>
-            <span class="section__subtitle">Dedication & Passion</span>
+            <h2 class="section__title" data-i18n="owner_title">Meet the Owner</h2>
+            <span class="section__subtitle" data-i18n="owner_subtitle">Dedication & Passion</span>
 
             <div class="owner__container container grid">
                 <div class="owner__img-box">
@@ -167,8 +185,8 @@
 
                 <div class="owner__data">
                     <h3 class="owner__name">Komang Kris Nanda</h3>
-                    <span class="owner__profession">Young Farmer & Entrepreneur</span>
-                    <p class="owner__description">
+                    <span class="owner__profession" data-i18n="owner_profession">Young Farmer & Entrepreneur</span>
+                    <p class="owner__description" data-i18n="owner_desc">
                         At just 18 years old, Komang Kris Nanda is driving the vision of Nanda Farm with energy and
                         commitment.
                         His passion for sustainable livestock farming ensures that every animal is raised with the
@@ -191,13 +209,13 @@
 
         <!-- CONTACT -->
         <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Us</h2>
-            <span class="section__subtitle">Ready to order?</span>
+            <h2 class="section__title" data-i18n="contact_title">Contact Us</h2>
+            <span class="section__subtitle" data-i18n="contact_subtitle">Ready to order?</span>
 
             <div class="contact__container container grid">
                 <div class="contact__content">
                     <a href="https://wa.me/081803386665" target="_blank" class="button contact__button-main">
-                        <ion-icon name="logo-whatsapp"></ion-icon> Chat on WhatsApp
+                        <ion-icon name="logo-whatsapp"></ion-icon> <span data-i18n="contact_wa">Chat on WhatsApp</span>
                     </a>
                 </div>
             </div>
@@ -208,7 +226,7 @@
         <div class="footer__container container">
             <div class="footer__content">
                 <a href="https://www.facebook.com/komang.krisnanda.180" class="footer__logo">Nanda<span>Farm</span></a>
-                <p class="footer__description">Providing high quality livestock since 2023.</p>
+                <p class="footer__description" data-i18n="footer_desc">Providing high quality livestock since 2023.</p>
             </div>
             <div class="footer__social">
                 <a href="https://www.facebook.com/komang.krisnanda.180" class="footer__social-link"><ion-icon
