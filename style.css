@@ -279,6 +279,10 @@ button {
 }
 
 /* PRODUCTS */
+.products {
+    padding-top: 2rem;
+}
+
 .products__slider-wrapper {
     overflow: hidden;
     padding: 1rem 0 3rem;
