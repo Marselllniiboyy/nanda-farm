@@ -39,38 +39,54 @@ function scrollHeader() {
 const slider = document.getElementById('product-slider');
 
 if (slider) {
-    let scrollAmount = 0;
-    const scrollStep = 1; // Speed of scroll
-    const delay = 30; // Time in ms (lower is smoother/faster)
-    let autoScrollInterval;
+    // Clone cards for infinite loop effect
+    const sliderChildren = [...slider.children];
+    // Clone enough items to fill the screen + some buffer
+    sliderChildren.forEach(item => {
+        const clone = item.cloneNode(true);
+        slider.appendChild(clone);
+    });
 
-    const startAutoScroll = () => {
-        autoScrollInterval = setInterval(() => {
-            slider.scrollLeft += scrollStep;
-            scrollAmount += scrollStep;
+    let isHovered = false;
+    let scrollPos = 0;
+    const speed = 0.5; // Lower is slower/smoother
 
-            // Check if we've scrolled to the end
-            if (Math.ceil(slider.scrollLeft) >= (slider.scrollWidth - slider.clientWidth)) {
-                // Determine behavior: Loop back to start smoothly or jump
-                // For "Netflix infinite loop feel", we usually need duplicated content. 
-                // Simple reset for now:
+    // Initial scroll position (to allow scrolling back initially if needed, logic simplified below)
+
+    function animateScroll() {
+        if (!isHovered) {
+            scrollPos += speed;
+            // logic to loop
+            // If we have scrolled past the original set width (approx)
+            // We need to calculate the width of the original set.
+            // Simplified: loop when scrollLeft hits a simplified max
+
+            // Actually, best way for infinite loop with clones:
+            // Scroll normally. If scrollLeft + clientWidth >= scrollWidth, reset to 0?
+            // No, reset to "start of clones".
+
+            // Let's use simple logic: scroll. If >= half width (since we doubled content), reset to 0.
+            // This assumes we cloned EVERYTHING.
+
+            if (slider.scrollLeft >= (slider.scrollWidth / 2)) {
                 slider.scrollLeft = 0;
-                scrollAmount = 0;
+                scrollPos = 0;
+            } else {
+                slider.scrollLeft = scrollPos;
             }
-        }, delay);
-    };
+        } else {
+            // Update scrollPos to match current scrollLeft in case user manually scrolled
+            scrollPos = slider.scrollLeft;
+        }
+        requestAnimationFrame(animateScroll);
+    }
 
-    const stopAutoScroll = () => {
-        clearInterval(autoScrollInterval);
-    };
+    // Start
+    requestAnimationFrame(animateScroll);
 
-    // Start on load
-    startAutoScroll();
-
-    // Pause on hover
-    slider.addEventListener('mouseenter', stopAutoScroll);
-    slider.addEventListener('mouseleave', startAutoScroll);
-    // Pause on touch
-    slider.addEventListener('touchstart', stopAutoScroll);
-    slider.addEventListener('touchend', startAutoScroll);
+    // Pause on interactions
+    slider.addEventListener('mouseenter', () => { isHovered = true; });
+    slider.addEventListener('mouseleave', () => { isHovered = false; });
+    slider.addEventListener('touchstart', () => { isHovered = true; });
+    slider.addEventListener('touchend', () => { isHovered = false; });
 }
